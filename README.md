@@ -9,9 +9,9 @@ In older versions of `lme4`, fitted models were returned as objects of class `me
 
 #### Problem 2
 All of `XenoCat`'s p-value function are broken as well. These were all based on `lme4`'s `mcmcsamp` procedure that is no longer available. Here is the relevant verbiage from the `lme4` [vignette]():
-```
-the new version of lme4 does not provide an mcmcsamp (post-hoc MCMC sampling) method, because this was deemed to be unreliable. Alternatives for computing p-values include parametric bootstrapping (bootMer) or methods implemented in the pbkrtest package and leveraged by the lmerTest package and the Anova function in the car package (see pvalues for more details).
-```  
+
+> the new version of lme4 does not provide an mcmcsamp (post-hoc MCMC sampling) method, because this was deemed to be unreliable. Alternatives for computing p-values include parametric bootstrapping (bootMer) or methods implemented in the pbkrtest package and leveraged by the lmerTest package and the Anova function in the car package (see pvalues for more details).
+  
 I will be implementing new [p-value calculations](http://www.phdcomics.com/comics/archive.php?comicid=905) using the [lmerTest](http://cran.r-project.org/web/packages/lmerTest/lmerTest.pdf) package. 
 
 ## Other bonuses
