@@ -292,7 +292,7 @@ xeno.fixef.pvals = function(
 	verbose=FALSE)
 {
 	require(lme4)
-	if(!class(fit)=="mer"){
+	if(!(class(fit) == "mer" || class(fit) == "lmerMod")){
 		stop("Input object should be a mer-object")
 	}
 	
@@ -354,7 +354,7 @@ xeno.fixef.MCMC = function(
 	}
 
 	require(lme4)
-	if(!class(fit)=="mer"){
+	if(!(class(fit) == "mer" || class(fit) == "lmerMod")){
 		stop("Input object should be a mer-object")
 	}
 	if(is.null(id) & verbose){
@@ -427,7 +427,7 @@ xeno.draw.HPDfixef = function(
 ){
 	require(lattice)
 	require(lme4)
-	if(!class(fit)=="mer"){
+	if(!(class(fit) == "mer" || class(fit) == "lmerMod")){
 		stop("Input object should be a mer-object")
 	}
 	cols=c("red","green","orange")
@@ -475,7 +475,7 @@ xeno.fixef.LRT = function(
 	fit,
 	digits=6) 
 {
-	if(!class(fit)=="mer"){
+	if(!(class(fit) == "mer" || class(fit) == "lmerMod")){
 		stop("Input object should be a mer-object")
 	}
 	model = as.formula(fit@call)
@@ -530,7 +530,7 @@ xeno.fixef.perm = function(
 	time=FALSE
 ){
 	require(lme4)
-	if(!class(fit)=="mer"){
+	if(!(class(fit) == "mer" || class(fit) == "lmerMod")){
 		stop("Input object should be a mer-object")
 	}
 	check_headers(fit, name=c(responsename, treatmentname, tpname, idname), mer=TRUE, dataframe=FALSE)
@@ -2201,7 +2201,7 @@ xeno.draw.ranef = function(
 	fit,
 	nclasses = 30
 ){
-	if(!class(fit)=="mer"){
+	if(!(class(fit) == "mer" || class(fit) == "lmerMod")){
 		stop("Input object should be a mer-object")
 	}
 
