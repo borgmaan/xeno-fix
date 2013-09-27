@@ -1,0 +1,15 @@
+Package: XenoCat
+Type: Package
+Title: Categorizing mixed-effects modeling of xenograft/tumor growth
+        experiments
+Version: 1.0.3
+Date: 2012-05-28
+Author: Teemu D Laajala
+Maintainer: Teemu D Laajala <tlaajala@cc.hut.fi>
+Description: Categorizing mixed-effects modeling for tumor growth experiments, xenografts in particular. Additional useful functions are included for visualization, validation, power and precision analysis etc.
+Depends: R (>= 2.10.0), lme4, lattice
+Suggests: mixtools, languageR, LMERConvenienceFunctions
+License: GPL (>= 2)
+LazyLoad: yes
+Encoding: UTF-8
+Packaged: 2012-05-29 01:44:20 UTC; Daniel
