@@ -14,7 +14,8 @@ I will also be extending some of the graphical capabilities of the package to al
 ## How can I use it?
 You can install my patched `XenoCat` package straight from GitHub with the [`devtools`](https://github.com/hadley/devtools) package. Just run:
 ```
-library(devtools)
-install_github("xeno-fix",username = "borgmaan")
+library(devtools) 
+install_github("xeno-fix",username = "borgmaan") # install it
+library(XenoCat) # loads the patched version now
 ```
 
